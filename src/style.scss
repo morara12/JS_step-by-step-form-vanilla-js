@@ -1,0 +1,115 @@
+$darkgrey: #33312E;
+$orange: #ff8552;
+$lightgrey: #e6e6e6;
+$lightblue: #A2C7E5;
+$green: #1A936F;
+
+html {
+   background-color: $lightblue;
+}
+
+.hidden {
+   display: none;
+}
+
+.button {
+   width: 140px;
+   cursor: pointer;
+   padding: 1em;
+   border-radius: 0.2em;
+   border: none;
+   color: white;
+   font-weight: bold;
+   font-size: 1em;
+   transition: all .5s ease;
+   background-color: $orange;
+
+   &:hover {
+      background-color: darken($orange, 15%);
+   }
+   &.disabled {
+      opacity: 0.5;
+      &:hover{
+       background-color: $orange;
+      }
+   }
+}
+.form {
+   width: 20em;
+   margin: auto;
+   margin-top:5em;
+
+   padding: 5em;
+   padding-top: 2em;
+   padding-bottom: 2em;
+   background-color: white;
+   font-family: "Raleway", sans-serif;
+   color: $darkgrey;
+   border-radius: 0.2em;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   .progress-bar {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      justify-content: center;
+      margin-bottom: 3.5em;
+      
+      li.progress-bar__dot {
+         display: block;
+         width: 0.6em;
+         border-radius: 1000em;
+         height: 0.6em;
+         border: 0.2em solid $orange;
+         background-color: white;
+         cursor:pointer;
+         transition: all .5s ease;
+
+         &.full {
+            background-color: $orange;
+         }
+      }
+      li.progress-bar__connector {
+         display: block;
+         width: 5em;
+         border-radius: 1000em;
+         height: 0.1em;
+         background-color: $orange;
+         margin-top: 0.45em;
+      }
+   }
+   label {
+      font-weight: bold;
+      font-size: 1.2em;
+   }
+   input {
+      width: 100%;
+      padding: 1.3em;
+      margin-bottom: 3em;
+      box-sizing: border-box;
+      margin-top: 1em;
+      border: none;
+      border-radius: 0.5em;
+      background-color:$lightgrey;
+      font-size:1em;
+      font-family: "Raleway", sans-serif;
+      &:focus {
+         border: none;
+      }
+   }
+   .button-group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top:50px;
+   }
+   
+   button#validate{
+      margin:auto;
+      background-color: $green;
+      width:12em;
+      &:hover {
+            background-color:darken($green, 10%);
+      }
+   }
+}
